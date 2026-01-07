@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "177315268958",
+    "project_id": "synthora-pos",
+    "storage_bucket": "synthora-pos.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:177315268958:android:22a3e73a11a49ff8bf67cf",
+        "android_client_info": {
+          "package_name": "com.synthora.pos.pos_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDI5HfgB7bmZiB__qILBka56i8vtZTUo7E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

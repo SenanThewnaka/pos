@@ -1,0 +1,924 @@
+Building macOS application...                                   
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:169329:25: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 169329 |       pTemplate->nOut = MIN(p->nOut - 1, pTemplate->nOut);
+        |                         ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:169337:25: warning: ambiguous expansion of macro 'MAX' [-Wambiguous-macro]
+ 169337 |       pTemplate->rRun = MAX(p->rRun, pTemplate->rRun);
+        |                         ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  218 | #define MAX(a, b) (((a)>(b))?(a):(b))
+      |         ^
+ 15396 | # define MAX(A,B) ((A)>(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:169338:25: warning: ambiguous expansion of macro 'MAX' [-Wambiguous-macro]
+ 169338 |       pTemplate->nOut = MAX(p->nOut + 1, pTemplate->nOut);
+        |                         ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  218 | #define MAX(a, b) (((a)>(b))?(a):(b))
+      |         ^
+ 15396 | # define MAX(A,B) ((A)>(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:169682:10: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 169682 |   nCmp = MIN(nCmp, (pIdx->nColumn - nEq));
+        |          ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:172396:19: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 172396 |   aFrom[0].nRow = MIN(pParse->nQueryLoop, 48);  assert( 48==sqlite3LogEst(28) );
+        |                   ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:174816:28: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 174816 |     int nSize = (p->nTotal / p->nParam);
+        |         ~~~~~    ~~~~~~~~~~^~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:176367:12: warning: ambiguous expansion of macro 'MAX' [-Wambiguous-macro]
+ 176367 |     nArg = MAX(nArg, windowArgCount(pWin));
+        |            ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  218 | #define MAX(a, b) (((a)>(b))?(a):(b))
+      |         ^
+ 15396 | # define MAX(A,B) ((A)>(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:177651:61: warning: implicit conversion loses integer precision: 'sqlite3_uint64' (aka 'unsigned long long') to 'int' [-Wshorten-64-to-32]
+ 177651 |     return sqlite3FaultSim(700) ? 0 : sqlite3_realloc(pOld, newSize);
+        |                                       ~~~~~~~~~~~~~~~       ^~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:181164:9: warning: code will never be executed [-Wunreachable-code]
+ 181164 |         YYMINORTYPE yylhsminor;
+        |         ^~~~~~~~~~~~~~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:184111:36: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 184111 |       return keywordCode((char*)z, i, tokenType);
+        |              ~~~~~~~~~~~           ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:185668:19: warning: implicit conversion loses integer precision: 'sqlite3_int64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 185668 |     nBig = szAlloc/(3*LOOKASIDE_SMALL+sz);
+        |          ~ ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:185669:40: warning: implicit conversion loses integer precision: 'sqlite_int64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 185669 |     nSm = (szAlloc - (i64)sz*(i64)nBig)/LOOKASIDE_SMALL;
+        |         ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:185671:19: warning: implicit conversion loses integer precision: 'sqlite3_int64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 185671 |     nBig = szAlloc/(LOOKASIDE_SMALL+sz);
+        |          ~ ~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:185672:40: warning: implicit conversion loses integer precision: 'sqlite_int64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 185672 |     nSm = (szAlloc - (i64)sz*(i64)nBig)/LOOKASIDE_SMALL;
+        |         ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:185676:19: warning: implicit conversion loses integer precision: 'sqlite3_int64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 185676 |     nBig = szAlloc/sz;
+        |          ~ ~~~~~~~^~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:210936:28: warning: implicit conversion loses integer precision: 'u64' (aka 'unsigned long long') to 'int' [-Wshorten-64-to-32]
+ 210936 |         pParse->nJson = p->nUsed;
+        |                       ~ ~~~^~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:212170:20: warning: implicit conversion loses integer precision: 'u64' (aka 'unsigned long long') to 'int' [-Wshorten-64-to-32]
+ 212170 |   px.nJson = pStr->nUsed;
+        |            ~ ~~~~~~^~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:212714:43: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'u32' (aka 'unsigned int') [-Wshorten-64-to-32]
+ 212714 |       jsonBlobExpand(pParse, pParse->nBlob+d);
+        |       ~~~~~~~~~~~~~~         ~~~~~~~~~~~~~^~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:215269:19: warning: implicit conversion loses integer precision: 'u64' (aka 'unsigned long long') to 'u32' (aka 'unsigned int') [-Wshorten-64-to-32]
+ 215269 |   u32 n = p->path.nUsed;
+        |       ~   ~~~~~~~~^~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:217855:26: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 217855 |       p1->aCoord[ii].f = MIN(p1->aCoord[ii].f, p2->aCoord[ii].f);
+        |                          ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:217856:28: warning: ambiguous expansion of macro 'MAX' [-Wambiguous-macro]
+ 217856 |       p1->aCoord[ii+1].f = MAX(p1->aCoord[ii+1].f, p2->aCoord[ii+1].f);
+        |                            ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  218 | #define MAX(a, b) (((a)>(b))?(a):(b))
+      |         ^
+ 15396 | # define MAX(A,B) ((A)>(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:217861:26: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 217861 |       p1->aCoord[ii].i = MIN(p1->aCoord[ii].i, p2->aCoord[ii].i);
+        |                          ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:217862:28: warning: ambiguous expansion of macro 'MAX' [-Wambiguous-macro]
+ 217862 |       p1->aCoord[ii+1].i = MAX(p1->aCoord[ii+1].i, p2->aCoord[ii+1].i);
+        |                            ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  218 | #define MAX(a, b) (((a)>(b))?(a):(b))
+      |         ^
+ 15396 | # define MAX(A,B) ((A)>(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:217903:12: warning: ambiguous expansion of macro 'MAX' [-Wambiguous-macro]
+ 217903 |       x1 = MAX(DCOORD(p->aCoord[jj]), DCOORD(aCell[ii].aCoord[jj]));
+        |            ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  218 | #define MAX(a, b) (((a)>(b))?(a):(b))
+      |         ^
+ 15396 | # define MAX(A,B) ((A)>(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:217904:12: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 217904 |       x2 = MIN(DCOORD(p->aCoord[jj+1]), DCOORD(aCell[ii].aCoord[jj+1]));
+        |            ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:219024:21: warning: ambiguous expansion of macro 'MAX' [-Wambiguous-macro]
+ 219024 |   pRtree->nRowEst = MAX(nRow, RTREE_MIN_ROWEST);
+        |                     ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  218 | #define MAX(a, b) (((a)>(b))?(a):(b))
+      |         ^
+ 15396 | # define MAX(A,B) ((A)>(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:219283:10: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 219283 |   return sqlite3GetToken((const unsigned char*)z,&dummy);
+        |   ~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:221919:20: warning: implicit conversion loses integer precision: 'sqlite3_int64' (aka 'long long') to 'u32' (aka 'unsigned int') [-Wshorten-64-to-32]
+ 221919 |     pBlob->iSize = nBlob;
+        |                  ~ ^~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:231889:66: warning: implicit conversion loses integer precision: 'sqlite3_int64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 231889 |         int iHash = sessionChangeHash(pTab, bPkOnly, p->aRecord, nNew);
+        |                     ~~~~~~~~~~~~~~~~~                            ^~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:231897:21: warning: implicit conversion loses integer precision: 'sqlite3_int64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 231897 |     pTab->nChange = nNew;
+        |                   ~ ^~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:232331:19: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 232331 |       p->nAlloc = nNew;
+        |                 ~ ^~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:232585:22: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 232585 |     int nIncr = nNew - pC->nMaxSize;
+        |         ~~~~~   ~~~~~^~~~~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:232586:20: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 232586 |     pC->nMaxSize = nNew;
+        |                  ~ ^~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:232740:21: warning: implicit conversion loses integer precision: 'sqlite3_int64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 232740 |       pC->nRecord = nByte;
+        |                   ~ ^~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:236609:28: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+ 236609 |       pNew->nRecord = pOut - pNew->aRecord;
+        |                     ~ ~~~~~^~~~~~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:236645:30: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+ 236645 |         pNew->nRecord = pOut - pNew->aRecord;
+        |                       ~ ~~~~~^~~~~~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:237331:22: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+ 237331 |     pBuf->nBuf = pOut-pBuf->aBuf;
+        |                ~ ~~~~^~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:237403:26: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+ 237403 |       pBuf->nBuf = (pOut - pBuf->aBuf);
+        |                  ~  ~~~~~^~~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:237495:29: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+ 237494 |               sessionAppendRecordMerge(&sOut, pIter->nCol,
+        |               ~~~~~~~~~~~~~~~~~~~~~~~~
+ 237495 |                   pCsr, nRec-(pCsr-aRec),
+        |                         ~~~~^~~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:240452:9: warning: code will never be executed [-Wunreachable-code]
+ 240452 |         fts5YYMINORTYPE fts5yylhsminor;
+        |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:242489:29: warning: implicit conversion loses integer precision: 'sqlite3_int64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 242489 |           pConfig->t.nArg = nArg;
+        |                           ~ ^~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:243532:23: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+ 243532 |       pToken->n = (z2 - z);
+        |                 ~  ~~~^~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:243544:23: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+ 243544 |       pToken->n = (z2 - z);
+        |                 ~  ~~~^~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:245582:18: warning: ambiguous expansion of macro 'MAX' [-Wambiguous-macro]
+ 245582 |     p->iHeight = MAX(p->iHeight, p->apChild[ii]->iHeight + 1);
+        |                  ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  218 | #define MAX(a, b) (((a)>(b))?(a):(b))
+      |         ^
+ 15396 | # define MAX(A,B) ((A)>(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:246992:18: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 246992 |       int nMin = MIN(p1->nKey, p2->nKey);
+        |                  ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:247976:10: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 247976 |   nCmp = MIN(pLeft->n, pRight->n);
+        |          ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:248051:20: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 248051 |         pRet->nn = nByte;
+        |                  ~ ^~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:248058:50: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 248058 |         rc = sqlite3_blob_read(p->pReader, aOut, nByte, 0);
+        |              ~~~~~~~~~~~~~~~~~                   ^~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:248358:27: warning: ambiguous expansion of macro 'MAX' [-Wambiguous-macro]
+ 248358 |             nOriginCntr = MAX(nOriginCntr, pSeg->iOrigin2);
+        |                           ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  218 | #define MAX(a, b) (((a)>(b))?(a):(b))
+      |         ^
+ 15396 | # define MAX(A,B) ((A)>(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:249049:18: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 249049 |       int iEod = MIN(pIter->iEndofDoclist, pIter->pLeaf->szLeaf);
+        |                  ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:249046:23: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 249046 |     int iOff = pIter->iLeafOffset;  /* Offset to read at */
+        |         ~~~~   ~~~~~~~^~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:249120:28: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 249120 |   pIter->iTermLeafOffset = iOff;
+        |                          ~ ^~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:249161:26: warning: implicit conversion loses integer precision: 'const i64' (aka 'const long long') to 'int' [-Wshorten-64-to-32]
+ 249161 |       pNew->nTombstone = nTomb;
+        |                        ~ ^~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:249231:18: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 249231 |   int i = pIter->iLeafOffset;
+        |       ~   ~~~~~~~^~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:249272:50: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 249272 |     pIter->aRowidOffset[iRowidOffset++] = pIter->iLeafOffset;
+        |                                         ~ ~~~~~~~^~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:249365:19: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 249365 |     iOff = pIter->iLeafOffset;
+        |          ~ ~~~~~~~^~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:249394:17: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 249394 |   iOff = pIter->iLeafOffset;
+        |        ~ ~~~~~~~^~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:249475:29: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 249475 |   iOff = pIter->iLeafOffset + pIter->nPos;
+        |        ~ ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:249750:19: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 249750 |       nCmp = (u32)MIN(nNew, nTerm-nMatch);
+        |                   ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:249818:35: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 249818 |   pIter->iTermLeafOffset = pIter->iLeafOffset;
+        |                          ~ ~~~~~~~^~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:250625:18: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 250625 |     pNew->nSeg = nSlot;
+        |                ~ ^~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:250755:16: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 250755 |   int nChunk = MIN(nRem, pSeg->pLeaf->szLeaf - pSeg->iLeafOffset);
+        |                ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:250780:16: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 250780 |       nChunk = MIN(nRem, pData->szLeaf - 4);
+        |                ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:250755:46: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 250755 |   int nChunk = MIN(nRem, pSeg->pLeaf->szLeaf - pSeg->iLeafOffset);
+        |       ~~~~~~             ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |                                   ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:250877:32: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+ 250877 |           pIter->base.nData = p-aCopy;
+        |                             ~ ~^~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:250997:30: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+ 250997 |     pIter->base.nData = aOut - pIter->poslist.p;
+        |                       ~ ~~~~~^~~~~~~~~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:251124:14: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 251124 |       nSeg = MIN(pStruct->aLevel[iLevel].nSeg, nSegment);
+        |              ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:251630:14: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 251630 |   int nMin = MIN(pPage->term.n, nTerm);
+        |              ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:252105:38: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 252105 |         int nPercent = (nTomb * 100) / nEntry;
+        |             ~~~~~~~~   ~~~~~~~~~~~~~~^~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:252582:17: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 252582 |       nPrefix = MIN(nPrefix, nPrefix2);
+        |                 ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:252488:36: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 252488 |       iNextOff = pSeg->iLeafOffset + pSeg->nPos;
+        |                ~ ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:253023:20: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 253023 |     pNew->nLevel = MIN(pStruct->nLevel+1, FTS5_MAX_LEVEL);
+        |                    ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:253688:18: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 253688 |         int n1 = MIN(nHalf, pT->nMap-i1);
+        |                  ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:253689:18: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 253689 |         int n2 = MIN(nHalf, pT->nMap-i1-n1);
+        |                  ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:253688:22: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 253688 |         int n1 = MIN(nHalf, pT->nMap-i1);
+        |             ~~       ^~~~~
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |                               ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:253689:22: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 253689 |         int n2 = MIN(nHalf, pT->nMap-i1-n1);
+        |             ~~       ^~~~~
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |                               ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:255141:22: warning: ambiguous expansion of macro 'MAX' [-Wambiguous-macro]
+ 255141 |   int nSlotPerPage = MAX(MINSLOT, (p->pConfig->pgsz - 8) / szKey);
+        |                      ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  218 | #define MAX(a, b) (((a)>(b))?(a):(b))
+      |         ^
+ 15396 | # define MAX(A,B) ((A)>(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:255171:13: warning: ambiguous expansion of macro 'MAX' [-Wambiguous-macro]
+ 255171 |     nSlot = MAX(nElem*4, MINSLOT);
+        |             ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  218 | #define MAX(a, b) (((a)>(b))?(a):(b))
+      |         ^
+ 15396 | # define MAX(A,B) ((A)>(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:255689:53: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 255689 |         res = fts5Memcmp(&pLeaf->p[iOff], zIdxTerm, MIN(nTerm, nIdxTerm));
+        |                                                     ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:257600:40: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+ 257600 |       pSorter->aIdx[i] = &aBlob[nBlob] - a;
+        |                        ~ ~~~~~~~~~~~~~~^~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:260344:38: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 260344 |     sqlite3_result_text(pCtx, zText, nText, SQLITE_TRANSIENT);
+        |     ~~~~~~~~~~~~~~~~~~~              ^~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:260367:38: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 260367 |     sqlite3_result_blob(pCtx, pBlob, nBlob, sqlite3_free);
+        |     ~~~~~~~~~~~~~~~~~~~              ^~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:262589:19: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+ 262589 |         is = zCsr - (unsigned char*)pText;
+        |            ~ ~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:262596:21: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+ 262596 |           is = zCsr - (unsigned char*)pText;
+        |              ~ ~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:262646:17: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+ 262646 |       ie = zCsr - (unsigned char*)pText;
+        |          ~ ~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:262650:37: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+ 262650 |     rc = xToken(pCtx, 0, aFold, zOut-aFold, is, ie);
+        |          ~~~~~~                 ~~~~^~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:263477:24: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+ 263477 |       aStart[ii] = zIn - (const unsigned char*)pText;
+        |                  ~ ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:263499:19: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+ 263499 |       iNext = zIn - (const unsigned char*)pText;
+        |             ~ ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:263509:36: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+ 263509 |     rc = xToken(pCtx, 0, aBuf, zOut-aBuf, aStart[0], iNext);
+        |          ~~~~~~                ~~~~^~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:265174:18: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 265174 |       int nCmp = MIN(nTerm, pCsr->nLeTerm);
+        |                  ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:265248:20: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 265248 |         int nCmp = MIN(nTerm, pCsr->nLeTerm);
+        |                    ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+182 warnings generated.
+ld: warning: ignoring duplicate libraries: '-lc++'
+ld: warning: ignoring duplicate libraries: '-lc++'
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/FirebaseAuth/FirebaseAuth/Sources/Swift/Auth/Auth.swift:1941:14: warning: weak variable 'weakSelf' was never mutated; consider changing to 'let' constant
+    weak var weakSelf = self
+         ~~~ ^
+         let
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/FirebaseAuth/FirebaseAuth/Sources/Swift/Auth/Auth.swift:1941:14: warning: weak variable 'weakSelf' was never mutated; consider changing to 'let' constant
+    weak var weakSelf = self
+         ~~~ ^
+         let
+:167722:14: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 167722 |   mxBitCol = MIN(BMS-1,pTable->nCol);
+        |              ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:169328:25: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 169328 |       pTemplate->rRun = MIN(p->rRun, pTemplate->rRun);
+        |                         ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:169329:25: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 169329 |       pTemplate->nOut = MIN(p->nOut - 1, pTemplate->nOut);
+        |                         ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:169337:25: warning: ambiguous expansion of macro 'MAX' [-Wambiguous-macro]
+ 169337 |       pTemplate->rRun = MAX(p->rRun, pTemplate->rRun);
+        |                         ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  218 | #define MAX(a, b) (((a)>(b))?(a):(b))
+      |         ^
+ 15396 | # define MAX(A,B) ((A)>(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:169338:25: warning: ambiguous expansion of macro 'MAX' [-Wambiguous-macro]
+ 169338 |       pTemplate->nOut = MAX(p->nOut + 1, pTemplate->nOut);
+        |                         ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  218 | #define MAX(a, b) (((a)>(b))?(a):(b))
+      |         ^
+ 15396 | # define MAX(A,B) ((A)>(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:169682:10: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 169682 |   nCmp = MIN(nCmp, (pIdx->nColumn - nEq));
+        |          ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:172396:19: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 172396 |   aFrom[0].nRow = MIN(pParse->nQueryLoop, 48);  assert( 48==sqlite3LogEst(28) );
+        |                   ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:174816:28: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 174816 |     int nSize = (p->nTotal / p->nParam);
+        |         ~~~~~    ~~~~~~~~~~^~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:176367:12: warning: ambiguous expansion of macro 'MAX' [-Wambiguous-macro]
+ 176367 |     nArg = MAX(nArg, windowArgCount(pWin));
+        |            ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  218 | #define MAX(a, b) (((a)>(b))?(a):(b))
+      |         ^
+ 15396 | # define MAX(A,B) ((A)>(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:177651:61: warning: implicit conversion loses integer precision: 'sqlite3_uint64' (aka 'unsigned long long') to 'int' [-Wshorten-64-to-32]
+ 177651 |     return sqlite3FaultSim(700) ? 0 : sqlite3_realloc(pOld, newSize);
+        |                                       ~~~~~~~~~~~~~~~       ^~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:181164:9: warning: code will never be executed [-Wunreachable-code]
+ 181164 |         YYMINORTYPE yylhsminor;
+        |         ^~~~~~~~~~~~~~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:184111:36: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 184111 |       return keywordCode((char*)z, i, tokenType);
+        |              ~~~~~~~~~~~           ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:185668:19: warning: implicit conversion loses integer precision: 'sqlite3_int64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 185668 |     nBig = szAlloc/(3*LOOKASIDE_SMALL+sz);
+        |          ~ ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:185669:40: warning: implicit conversion loses integer precision: 'sqlite_int64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 185669 |     nSm = (szAlloc - (i64)sz*(i64)nBig)/LOOKASIDE_SMALL;
+        |         ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:185671:19: warning: implicit conversion loses integer precision: 'sqlite3_int64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 185671 |     nBig = szAlloc/(LOOKASIDE_SMALL+sz);
+        |          ~ ~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:185672:40: warning: implicit conversion loses integer precision: 'sqlite_int64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 185672 |     nSm = (szAlloc - (i64)sz*(i64)nBig)/LOOKASIDE_SMALL;
+        |         ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:185676:19: warning: implicit conversion loses integer precision: 'sqlite3_int64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 185676 |     nBig = szAlloc/sz;
+        |          ~ ~~~~~~~^~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:210936:28: warning: implicit conversion loses integer precision: 'u64' (aka 'unsigned long long') to 'int' [-Wshorten-64-to-32]
+ 210936 |         pParse->nJson = p->nUsed;
+        |                       ~ ~~~^~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:212170:20: warning: implicit conversion loses integer precision: 'u64' (aka 'unsigned long long') to 'int' [-Wshorten-64-to-32]
+ 212170 |   px.nJson = pStr->nUsed;
+        |            ~ ~~~~~~^~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:212714:43: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'u32' (aka 'unsigned int') [-Wshorten-64-to-32]
+ 212714 |       jsonBlobExpand(pParse, pParse->nBlob+d);
+        |       ~~~~~~~~~~~~~~         ~~~~~~~~~~~~~^~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:215269:19: warning: implicit conversion loses integer precision: 'u64' (aka 'unsigned long long') to 'u32' (aka 'unsigned int') [-Wshorten-64-to-32]
+ 215269 |   u32 n = p->path.nUsed;
+        |       ~   ~~~~~~~~^~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:217855:26: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 217855 |       p1->aCoord[ii].f = MIN(p1->aCoord[ii].f, p2->aCoord[ii].f);
+        |                          ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:217856:28: warning: ambiguous expansion of macro 'MAX' [-Wambiguous-macro]
+ 217856 |       p1->aCoord[ii+1].f = MAX(p1->aCoord[ii+1].f, p2->aCoord[ii+1].f);
+        |                            ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  218 | #define MAX(a, b) (((a)>(b))?(a):(b))
+      |         ^
+ 15396 | # define MAX(A,B) ((A)>(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:217861:26: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 217861 |       p1->aCoord[ii].i = MIN(p1->aCoord[ii].i, p2->aCoord[ii].i);
+        |                          ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:217862:28: warning: ambiguous expansion of macro 'MAX' [-Wambiguous-macro]
+ 217862 |       p1->aCoord[ii+1].i = MAX(p1->aCoord[ii+1].i, p2->aCoord[ii+1].i);
+        |                            ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  218 | #define MAX(a, b) (((a)>(b))?(a):(b))
+      |         ^
+ 15396 | # define MAX(A,B) ((A)>(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:217903:12: warning: ambiguous expansion of macro 'MAX' [-Wambiguous-macro]
+ 217903 |       x1 = MAX(DCOORD(p->aCoord[jj]), DCOORD(aCell[ii].aCoord[jj]));
+        |            ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  218 | #define MAX(a, b) (((a)>(b))?(a):(b))
+      |         ^
+ 15396 | # define MAX(A,B) ((A)>(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:217904:12: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 217904 |       x2 = MIN(DCOORD(p->aCoord[jj+1]), DCOORD(aCell[ii].aCoord[jj+1]));
+        |            ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:219024:21: warning: ambiguous expansion of macro 'MAX' [-Wambiguous-macro]
+ 219024 |   pRtree->nRowEst = MAX(nRow, RTREE_MIN_ROWEST);
+        |                     ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  218 | #define MAX(a, b) (((a)>(b))?(a):(b))
+      |         ^
+ 15396 | # define MAX(A,B) ((A)>(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:219283:10: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 219283 |   return sqlite3GetToken((const unsigned char*)z,&dummy);
+        |   ~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:221919:20: warning: implicit conversion loses integer precision: 'sqlite3_int64' (aka 'long long') to 'u32' (aka 'unsigned int') [-Wshorten-64-to-32]
+ 221919 |     pBlob->iSize = nBlob;
+        |                  ~ ^~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:231889:66: warning: implicit conversion loses integer precision: 'sqlite3_int64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 231889 |         int iHash = sessionChangeHash(pTab, bPkOnly, p->aRecord, nNew);
+        |                     ~~~~~~~~~~~~~~~~~                            ^~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:231897:21: warning: implicit conversion loses integer precision: 'sqlite3_int64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 231897 |     pTab->nChange = nNew;
+        |                   ~ ^~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:232331:19: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 232331 |       p->nAlloc = nNew;
+        |                 ~ ^~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:232585:22: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 232585 |     int nIncr = nNew - pC->nMaxSize;
+        |         ~~~~~   ~~~~~^~~~~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:232586:20: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 232586 |     pC->nMaxSize = nNew;
+        |                  ~ ^~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:232740:21: warning: implicit conversion loses integer precision: 'sqlite3_int64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 232740 |       pC->nRecord = nByte;
+        |                   ~ ^~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:236609:28: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+ 236609 |       pNew->nRecord = pOut - pNew->aRecord;
+        |                     ~ ~~~~~^~~~~~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:236645:30: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+ 236645 |         pNew->nRecord = pOut - pNew->aRecord;
+        |                       ~ ~~~~~^~~~~~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:237331:22: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+ 237331 |     pBuf->nBuf = pOut-pBuf->aBuf;
+        |                ~ ~~~~^~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:237403:26: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+ 237403 |       pBuf->nBuf = (pOut - pBuf->aBuf);
+        |                  ~  ~~~~~^~~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:237495:29: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+ 237494 |               sessionAppendRecordMerge(&sOut, pIter->nCol,
+        |               ~~~~~~~~~~~~~~~~~~~~~~~~
+ 237495 |                   pCsr, nRec-(pCsr-aRec),
+        |                         ~~~~^~~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:240452:9: warning: code will never be executed [-Wunreachable-code]
+ 240452 |         fts5YYMINORTYPE fts5yylhsminor;
+        |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:242489:29: warning: implicit conversion loses integer precision: 'sqlite3_int64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 242489 |           pConfig->t.nArg = nArg;
+        |                           ~ ^~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:243532:23: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+ 243532 |       pToken->n = (z2 - z);
+        |                 ~  ~~~^~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:243544:23: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+ 243544 |       pToken->n = (z2 - z);
+        |                 ~  ~~~^~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:245582:18: warning: ambiguous expansion of macro 'MAX' [-Wambiguous-macro]
+ 245582 |     p->iHeight = MAX(p->iHeight, p->apChild[ii]->iHeight + 1);
+        |                  ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  218 | #define MAX(a, b) (((a)>(b))?(a):(b))
+      |         ^
+ 15396 | # define MAX(A,B) ((A)>(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:246992:18: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 246992 |       int nMin = MIN(p1->nKey, p2->nKey);
+        |                  ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:247976:10: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 247976 |   nCmp = MIN(pLeft->n, pRight->n);
+        |          ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:248051:20: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 248051 |         pRet->nn = nByte;
+        |                  ~ ^~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:248058:50: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 248058 |         rc = sqlite3_blob_read(p->pReader, aOut, nByte, 0);
+        |              ~~~~~~~~~~~~~~~~~                   ^~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:248358:27: warning: ambiguous expansion of macro 'MAX' [-Wambiguous-macro]
+ 248358 |             nOriginCntr = MAX(nOriginCntr, pSeg->iOrigin2);
+        |                           ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  218 | #define MAX(a, b) (((a)>(b))?(a):(b))
+      |         ^
+ 15396 | # define MAX(A,B) ((A)>(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:249049:18: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 249049 |       int iEod = MIN(pIter->iEndofDoclist, pIter->pLeaf->szLeaf);
+        |                  ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:249046:23: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 249046 |     int iOff = pIter->iLeafOffset;  /* Offset to read at */
+        |         ~~~~   ~~~~~~~^~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:249120:28: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 249120 |   pIter->iTermLeafOffset = iOff;
+        |                          ~ ^~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:249161:26: warning: implicit conversion loses integer precision: 'const i64' (aka 'const long long') to 'int' [-Wshorten-64-to-32]
+ 249161 |       pNew->nTombstone = nTomb;
+        |                        ~ ^~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:249231:18: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 249231 |   int i = pIter->iLeafOffset;
+        |       ~   ~~~~~~~^~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:249272:50: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 249272 |     pIter->aRowidOffset[iRowidOffset++] = pIter->iLeafOffset;
+        |                                         ~ ~~~~~~~^~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:249365:19: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 249365 |     iOff = pIter->iLeafOffset;
+        |          ~ ~~~~~~~^~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:249394:17: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 249394 |   iOff = pIter->iLeafOffset;
+        |        ~ ~~~~~~~^~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:249475:29: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 249475 |   iOff = pIter->iLeafOffset + pIter->nPos;
+        |        ~ ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:249750:19: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 249750 |       nCmp = (u32)MIN(nNew, nTerm-nMatch);
+        |                   ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:249818:35: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 249818 |   pIter->iTermLeafOffset = pIter->iLeafOffset;
+        |                          ~ ~~~~~~~^~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:250625:18: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 250625 |     pNew->nSeg = nSlot;
+        |                ~ ^~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:250755:16: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 250755 |   int nChunk = MIN(nRem, pSeg->pLeaf->szLeaf - pSeg->iLeafOffset);
+        |                ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:250780:16: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 250780 |       nChunk = MIN(nRem, pData->szLeaf - 4);
+        |                ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:250755:46: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 250755 |   int nChunk = MIN(nRem, pSeg->pLeaf->szLeaf - pSeg->iLeafOffset);
+        |       ~~~~~~             ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |                                   ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:250877:32: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+ 250877 |           pIter->base.nData = p-aCopy;
+        |                             ~ ~^~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:250997:30: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+ 250997 |     pIter->base.nData = aOut - pIter->poslist.p;
+        |                       ~ ~~~~~^~~~~~~~~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:251124:14: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 251124 |       nSeg = MIN(pStruct->aLevel[iLevel].nSeg, nSegment);
+        |              ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:251630:14: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 251630 |   int nMin = MIN(pPage->term.n, nTerm);
+        |              ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:252105:38: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 252105 |         int nPercent = (nTomb * 100) / nEntry;
+        |             ~~~~~~~~   ~~~~~~~~~~~~~~^~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:252582:17: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 252582 |       nPrefix = MIN(nPrefix, nPrefix2);
+        |                 ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:252488:36: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 252488 |       iNextOff = pSeg->iLeafOffset + pSeg->nPos;
+        |                ~ ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:253023:20: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 253023 |     pNew->nLevel = MIN(pStruct->nLevel+1, FTS5_MAX_LEVEL);
+        |                    ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:253688:18: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 253688 |         int n1 = MIN(nHalf, pT->nMap-i1);
+        |                  ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:253689:18: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 253689 |         int n2 = MIN(nHalf, pT->nMap-i1-n1);
+        |                  ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:253688:22: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 253688 |         int n1 = MIN(nHalf, pT->nMap-i1);
+        |             ~~       ^~~~~
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |                               ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:253689:22: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 253689 |         int n2 = MIN(nHalf, pT->nMap-i1-n1);
+        |             ~~       ^~~~~
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |                               ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:255141:22: warning: ambiguous expansion of macro 'MAX' [-Wambiguous-macro]
+ 255141 |   int nSlotPerPage = MAX(MINSLOT, (p->pConfig->pgsz - 8) / szKey);
+        |                      ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  218 | #define MAX(a, b) (((a)>(b))?(a):(b))
+      |         ^
+ 15396 | # define MAX(A,B) ((A)>(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:255171:13: warning: ambiguous expansion of macro 'MAX' [-Wambiguous-macro]
+ 255171 |     nSlot = MAX(nElem*4, MINSLOT);
+        |             ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  218 | #define MAX(a, b) (((a)>(b))?(a):(b))
+      |         ^
+ 15396 | # define MAX(A,B) ((A)>(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:255689:53: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 255689 |         res = fts5Memcmp(&pLeaf->p[iOff], zIdxTerm, MIN(nTerm, nIdxTerm));
+        |                                                     ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:257600:40: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+ 257600 |       pSorter->aIdx[i] = &aBlob[nBlob] - a;
+        |                        ~ ~~~~~~~~~~~~~~^~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:260344:38: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 260344 |     sqlite3_result_text(pCtx, zText, nText, SQLITE_TRANSIENT);
+        |     ~~~~~~~~~~~~~~~~~~~              ^~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:260367:38: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+ 260367 |     sqlite3_result_blob(pCtx, pBlob, nBlob, sqlite3_free);
+        |     ~~~~~~~~~~~~~~~~~~~              ^~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:262589:19: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+ 262589 |         is = zCsr - (unsigned char*)pText;
+        |            ~ ~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:262596:21: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+ 262596 |           is = zCsr - (unsigned char*)pText;
+        |              ~ ~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:262646:17: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+ 262646 |       ie = zCsr - (unsigned char*)pText;
+        |          ~ ~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:262650:37: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+ 262650 |     rc = xToken(pCtx, 0, aFold, zOut-aFold, is, ie);
+        |          ~~~~~~                 ~~~~^~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:263477:24: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+ 263477 |       aStart[ii] = zIn - (const unsigned char*)pText;
+        |                  ~ ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:263499:19: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+ 263499 |       iNext = zIn - (const unsigned char*)pText;
+        |             ~ ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:263509:36: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+ 263509 |     rc = xToken(pCtx, 0, aBuf, zOut-aBuf, aStart[0], iNext);
+        |          ~~~~~~                ~~~~^~~~~
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:265174:18: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 265174 |       int nCmp = MIN(nTerm, pCsr->nLeTerm);
+        |                  ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+/Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:265248:20: warning: ambiguous expansion of macro 'MIN' [-Wambiguous-macro]
+ 265248 |         int nCmp = MIN(nTerm, pCsr->nLeTerm);
+        |                    ^
+In module 'Darwin' imported from /Users/senanthewnaka/Documents/synthora/products/pos/macos/Pods/sqlite3/sqlite-src-3510100/sqlite3.c:27488:
+  215 | #define MIN(a, b) (((a)<(b))?(a):(b))
+      |         ^
+ 15393 | # define MIN(A,B) ((A)<(B)?(A):(B))
+       |          ^
+182 warnings generated.
+ld: warning: ignoring duplicate libraries: '-lc++'
+ld: warning: ignoring duplicate libraries: '-lc++'
