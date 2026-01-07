@@ -70,7 +70,7 @@ class _ProductFormScreenState extends State<ProductFormScreen> {
         await widget.dao.updateProduct(updated);
       }
       
-      if (mounted) Navigator.pop(context);
+      if (mounted) Navigator.pop(context, barcode);
     } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Error: $e")));
     } finally {
@@ -111,7 +111,18 @@ class _ProductFormScreenState extends State<ProductFormScreen> {
                     _buildTextField(_barcodeCtrl, "Barcode / SKU", Icons.qr_code, 
                       focusNode: _barcodeFocus, 
                       action: TextInputAction.done,
-                      onSubmitted: (_) => _save()), // Auto-save on Enter (Scanner)
+                      onSubmitted: (_) => _save(),
+                      suffixIcon: IconButton(
+                        icon: const Icon(Icons.autorenew, color: AppTheme.accentColor),
+                        tooltip: "Generate Auto-Barcode",
+                        onPressed: () {
+                          setState(() {
+                            // Use timestamp as simple unique barcode
+                            _barcodeCtrl.text = DateTime.now().millisecondsSinceEpoch.toString();
+                          });
+                        },
+                      )
+                    ),
                   ],
                 ),
               ),
@@ -136,7 +147,7 @@ class _ProductFormScreenState extends State<ProductFormScreen> {
   }
 
   Widget _buildTextField(TextEditingController controller, String label, IconData icon, 
-      {bool isNumber = false, bool isAutofocus = false, FocusNode? focusNode, TextInputAction? action, Function(String)? onSubmitted}) {
+      {bool isNumber = false, bool isAutofocus = false, FocusNode? focusNode, TextInputAction? action, Function(String)? onSubmitted, Widget? suffixIcon}) {
     return TextFormField(
       controller: controller,
       focusNode: focusNode,
@@ -149,6 +160,7 @@ class _ProductFormScreenState extends State<ProductFormScreen> {
         labelText: label,
         labelStyle: TextStyle(color: Colors.white.withOpacity(0.5)),
         prefixIcon: Icon(icon, color: AppTheme.accentColor),
+        suffixIcon: suffixIcon,
         enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide(color: Colors.white.withOpacity(0.2))),
         focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: const BorderSide(color: AppTheme.accentColor)),
         errorBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: const BorderSide(color: AppTheme.dangerColor)),

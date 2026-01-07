@@ -6,7 +6,7 @@ import '../../../../core/logic/firebase_service.dart';
 import '../../../../core/logic/email_service.dart';
 import '../../../../core/logic/sync_service.dart';
 import '../../../../core/theme/app_theme.dart';
-import '../../../dashboard/presentation/pages/owner_dashboard_screen.dart';
+import 'portal_launcher_screen.dart';
 
 class OwnerLoginScreen extends StatefulWidget {
   final AppDatabase db;
@@ -36,7 +36,7 @@ class _OwnerLoginScreenState extends State<OwnerLoginScreen> {
     final store = await _firebase.verifyOwnerCredentials(email, password);
     
     if (store != null) {
-       await _syncAndLogin(store['id']);
+       await _syncAndLogin(store);
     } else {
        setState(() => _isLoading = false);
        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
@@ -46,11 +46,14 @@ class _OwnerLoginScreenState extends State<OwnerLoginScreen> {
     }
   }
 
-  Future<void> _syncAndLogin(String storeId) async {
+  Future<void> _syncAndLogin(Map<String, dynamic> storeData) async {
     try {
+      final storeId = storeData['id'];
+      final shopCode = storeData['shopCode'] ?? "UNKNOWN";
+
       // 1. Set Local Store Context
       final syncService = SyncService(widget.db, _firebase);
-      await syncService.setStoreId(storeId);
+      await syncService.setStoreContext(storeId, shopCode);
 
       // 2. Sync Users from Cloud
       final users = await _firebase.getStoreUsers(storeId);
@@ -71,9 +74,23 @@ class _OwnerLoginScreenState extends State<OwnerLoginScreen> {
 
       setState(() => _isLoading = false);
 
+      // Create Session User for Owner
+      final ownerUser = User(
+        id: 0,
+        name: "Owner",
+        pinCode: "",
+        role: "OWNER",
+        isActive: true,
+        lastLogin: DateTime.now()
+      );
+
       if (mounted) {
          Navigator.pushAndRemoveUntil(context, MaterialPageRoute(
-           builder: (_) => OwnerDashboardScreen(db: widget.db)
+           builder: (_) => PortalLauncherScreen(
+             db: widget.db, 
+             user: ownerUser,
+             syncService: syncService
+           )
          ), (route) => false);
       }
     } catch (e) {

@@ -7,6 +7,7 @@ import '../../../../core/theme/app_theme.dart';
 
 import 'package:pos_app/core/logic/label_printing_service.dart';
 import 'grn_history_screen.dart';
+import 'product_form_screen.dart';
 
 class GrnEntryScreen extends StatefulWidget {
   final AppDatabase db;
@@ -255,9 +256,30 @@ class _GrnEntryScreenState extends State<GrnEntryScreen> {
         children: [
           Expanded(
             flex: 2,
-            child: _buildSmallTextField(_barcodeCtrl, "Scan Barcode / SKU", Icons.qr_code_scanner, 
-              focusNode: _barcodeFocus,
-              onSubmitted: (_) => _lookupProduct()),
+            child: Row(
+               children: [
+                 Expanded(
+                   child: _buildSmallTextField(_barcodeCtrl, "Scan Barcode / SKU", Icons.qr_code_scanner, 
+                    focusNode: _barcodeFocus,
+                    onSubmitted: (_) => _lookupProduct()),
+                 ),
+                 IconButton(
+                   icon: const Icon(Icons.add_circle_outline, color: AppTheme.successColor),
+                   tooltip: "New Product",
+                   onPressed: () async {
+                      final result = await Navigator.push(context, MaterialPageRoute(
+                        builder: (_) => ProductFormScreen(dao: widget.db.productDao)
+                      ));
+                      if (result != null && result is String) {
+                         setState(() {
+                           _barcodeCtrl.text = result;
+                         });
+                         _lookupProduct();
+                      }
+                   },
+                 )
+               ],
+            ),
           ),
           const SizedBox(width: 12),
           Expanded(

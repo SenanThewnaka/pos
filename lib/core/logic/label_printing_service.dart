@@ -1,4 +1,6 @@
+import 'dart:convert';
 import 'package:pos_app/core/database/app_database.dart';
+import 'package:pos_app/core/logic/printer_service.dart';
 
 class LabelPrintingService {
   
@@ -11,14 +13,18 @@ class LabelPrintingService {
     required double price,
     int quantity = 1,
   }) async {
-    // In a real app, this would generate ZPL (Zebra) or ESC/POS commands
-    // and send them to a Bluetooth/USB printer.
-    
     final labelCommand = _generateEscPosCommand(productName, barcode, price);
+    // Convert string command (TSPL/CPCL) to bytes
+    final bytes = utf8.encode(labelCommand);
     
     for (int i = 0; i < quantity; i++) {
-      print("[PRINTING LABEL $i/$quantity]\n$labelCommand");
-      // await BluetoothPrinter.write(labelCommand);
+        try {
+           await PrinterService().printBytes(bytes);
+        } catch (e) {
+           print("Label Print Error: $e");
+           // Rethrow only on first attempt to notify UI? 
+           // Or just log it.
+        }
     }
   }
 

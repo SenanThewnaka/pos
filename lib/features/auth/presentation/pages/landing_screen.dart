@@ -4,6 +4,7 @@ import 'package:pos_app/core/database/app_database.dart';
 import 'package:pos_app/core/logic/transaction_service.dart';
 import 'package:pos_app/core/theme/app_theme.dart';
 import 'owner_signup_screen.dart';
+import 'owner_login_screen.dart';
 import 'universal_login_screen.dart';
 
 class LandingScreen extends StatelessWidget {
@@ -67,6 +68,21 @@ class LandingScreen extends StatelessWidget {
                 onTap: () {
                   Navigator.push(context, MaterialPageRoute(
                     builder: (_) => UniversalLoginScreen(db: db, txService: txService)
+                  ));
+                }
+              ),
+              
+              const SizedBox(height: 16),
+              
+               _buildOptionCard(
+                context,
+                icon: Icons.admin_panel_settings_outlined,
+                title: "OWNER ACCESS",
+                subtitle: "Login with Email & Password",
+                isPrimary: false,
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(
+                    builder: (_) => OwnerLoginScreen(db: db)
                   ));
                 }
               ),

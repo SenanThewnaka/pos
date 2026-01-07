@@ -28,5 +28,11 @@
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>Bluetooth is used to connect to thermal printers.</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>Bluetooth is used to connect to thermal printers.</string>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>Network access is required for LAN printers.</string>
 </dict>
 </plist>

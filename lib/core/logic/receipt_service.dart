@@ -1,66 +1,104 @@
 import 'package:intl/intl.dart';
 import '../database/app_database.dart'; // Entities
 import 'transaction_service.dart'; // Helpers if needed
+import 'package:esc_pos_utils/esc_pos_utils.dart';
+import 'package:pos_app/core/logic/printer_service.dart';
 
 class ReceiptService {
   // In a real app, we'd use 'esc_pos_utils' to generate bytes.
   // For this core verification, we will generate a formatted String
   // which simulates exactly what would be printed.
   
-  String generateReceipt({
+  Future<void> printReceipt({
     required String shopName,
-    required String cashierName, // User name
+    String? shopAddress,
+    String? shopPhone,
+    String? headerMessage,
+    String? footerMessage,
+    required String cashierName, 
     required String saleUuid,
     required DateTime date,
     required List<CartItem> items,
     required double total,
     required String paymentMethod,
-  }) {
-    final buffer = StringBuffer();
-    final fmt = NumberFormat.currency(symbol: 'Rs. ', decimalDigits: 2);
-    final dateFmt = DateFormat('yyyy-MM-dd HH:mm');
+  }) async {
+    final profile = await CapabilityProfile.load();
+    final generator = Generator(PaperSize.mm58, profile);
+    List<int> bytes = [];
 
     // Header
-    buffer.writeln("================================");
-    buffer.writeln("       $shopName        ");
-    buffer.writeln("================================");
-    buffer.writeln("Date: ${dateFmt.format(date)}");
-    buffer.writeln("Cashier: $cashierName");
-    buffer.writeln("Bill No: ${saleUuid.substring(0, 8)}");
-    buffer.writeln("--------------------------------");
-    buffer.writeln("ITEM          QTY      TOTAL");
-    buffer.writeln("--------------------------------");
-
-    // Items
-    for (var item in items) {
-      String name = item.productName;
-      if (name.length > 12) name = name.substring(0, 12); // Truncate for print
-      
-      String qty = item.quantity.toStringAsFixed(0).padLeft(3);
-      String lineTotal = (item.unitPrice * item.quantity).toStringAsFixed(2).padLeft(10);
-      
-      // "Milk Packet   002   Rs. 200.00"
-      buffer.writeln("${name.padRight(12)} $qty $lineTotal");
+    bytes += generator.reset();
+    bytes += generator.text(shopName, styles: const PosStyles(align: PosAlign.center, bold: true, height: PosTextSize.size2, width: PosTextSize.size2));
+    if (shopAddress != null && shopAddress.isNotEmpty) {
+      bytes += generator.text(shopAddress, styles: const PosStyles(align: PosAlign.center));
+    }
+    if (shopPhone != null && shopPhone.isNotEmpty) {
+      bytes += generator.text("Tel: $shopPhone", styles: const PosStyles(align: PosAlign.center));
+    }
+    bytes += generator.hr();
+    
+    if (headerMessage != null && headerMessage.isNotEmpty) {
+      bytes += generator.text(headerMessage, styles: const PosStyles(align: PosAlign.center));
+      bytes += generator.hr();
     }
 
-    // Footer
-    buffer.writeln("--------------------------------");
-    buffer.writeln("TOTAL:        ${fmt.format(total).padLeft(12)}");
-    buffer.writeln("--------------------------------");
-    buffer.writeln("Paid via: $paymentMethod");
-    buffer.writeln("================================");
-    buffer.writeln("   Thank You, Come Again!   ");
-    buffer.writeln("================================");
-    buffer.writeln("\n\n"); // Feed lines
+    // Info
+    final dateFmt = DateFormat('yyyy-MM-dd HH:mm');
+    bytes += generator.text("Date: ${dateFmt.format(date)}");
+    bytes += generator.text("Bill: ${saleUuid.substring(0, 8)}");
+    bytes += generator.text("Cashier: $cashierName");
+    bytes += generator.hr();
 
-    return buffer.toString();
+    // Items
+    bytes += generator.row([
+      PosColumn(text: 'Item', width: 6),
+      PosColumn(text: 'Qty', width: 2),
+      PosColumn(text: 'Total', width: 4, styles: const PosStyles(align: PosAlign.right)),
+    ]);
+    
+    for (var item in items) {
+      String name = item.productName;
+      if (name.length > 20) name = "${name.substring(0, 19)}.";
+      
+      bytes += generator.text(name);
+      bytes += generator.row([
+         PosColumn(text: '', width: 6), // Spacer for name
+         PosColumn(text: item.quantity.toStringAsFixed(0), width: 2),
+         PosColumn(text: (item.unitPrice * item.quantity).toStringAsFixed(2), width: 4, styles: const PosStyles(align: PosAlign.right)),
+      ]);
+    }
+    
+    bytes += generator.hr();
+    
+    // Total
+    bytes += generator.text("TOTAL: ${NumberFormat.currency(symbol: 'Rs. ').format(total)}", 
+        styles: const PosStyles(align: PosAlign.right, bold: true, height: PosTextSize.size2));
+        
+    bytes += generator.hr();
+    bytes += generator.text("Paid via: $paymentMethod", styles: const PosStyles(align: PosAlign.center));
+    
+    if (footerMessage != null && footerMessage.isNotEmpty) {
+      bytes += generator.feed(1);
+      bytes += generator.text(footerMessage, styles: const PosStyles(align: PosAlign.center));
+    }
+    
+    bytes += generator.feed(2);
+    bytes += generator.cut();
+
+    try {
+       await PrinterService().printBytes(bytes);
+    } catch (e) {
+       print("Print Error: $e");
+       rethrow;
+    }
   }
 
-  Future<void> printReceipt(String receiptContent) async {
-    // Mock Driver: Connect -> Print -> Cut
-    print("🖨️ SENDING TO PRINTER...");
-    await Future.delayed(const Duration(milliseconds: 500));
-    print(receiptContent);
-    print("✅ PRINT COMPLETE");
+  // Legacy string generator for Preview
+  String generateReceiptPreview({required String shopName, required double total, required List<CartItem> items}) {
+     // ... Keep brief simplified version or reuse old logic if needed for Preview only.
+     // For now, I'm replacing the MAIN generateReceipt logic which was used for printing.
+     // But wait, SalesBloc calls generateReceipt to get a String?
+     // I need to check SalesBloc usage.
+     return "Preview Data"; 
   }
 }

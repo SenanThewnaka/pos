@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pos_app/core/logic/receipt_service.dart';
+import 'package:pos_app/core/logic/shop_config_service.dart';
 import 'package:pos_app/core/logic/transaction_service.dart'; // For CartItem
 import '../../../../core/database/app_database.dart';
 import '../../../../core/database/daos/sales_dao.dart';
@@ -57,6 +58,8 @@ class _TransactionDetailScreenState extends State<TransactionDetailScreen> {
   
   void _reprint() async {
      final receiptService = ReceiptService();
+     final config = ShopConfigService();
+     await config.loadSettings();
      
      // Convert SaleItems to CartItems for printing
      List<CartItem> cartItems = _items.map((i) => CartItem(
@@ -64,21 +67,23 @@ class _TransactionDetailScreenState extends State<TransactionDetailScreen> {
        productName: _productNames[i.productId] ?? "Item",
        quantity: i.quantity,
        unitPrice: i.unitPrice,
-       tax: 0, // No tax info in SaleItem currently, assume 0 for reprint or valid value
-       discount: 0 // No discount info in SaleItem currently
+       tax: 0, 
+       discount: 0 
      )).toList();
      
-     final receipt = receiptService.generateReceipt(
-       shopName: "Synthora POS", // Should get from config
-       cashierName: "Manager", // History doesn't assume current user
+     await receiptService.printReceipt(
+       shopName: config.shopName,
+       shopAddress: config.shopAddress,
+       shopPhone: config.shopPhone,
+       headerMessage: config.headerMessage,
+       footerMessage: config.footerMessage,
+       cashierName: "Manager", 
        saleUuid: widget.sale.uuid,
        date: widget.sale.saleDate,
        items: cartItems,
        total: widget.sale.totalAmount,
        paymentMethod: widget.sale.paymentMethod
      );
-     
-     await receiptService.printReceipt(receipt);
      if (mounted) ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Receipt Sent to Printer")));
   }
 

@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../../../core/database/app_database.dart';
 import '../../../../core/database/daos/product_dao.dart';
 import '../../../../core/theme/app_theme.dart';
+import '../../../../core/logic/label_printing_service.dart';
 import 'product_form_screen.dart';
 
 class ProductCatalogScreen extends StatefulWidget {
@@ -17,6 +18,7 @@ class _ProductCatalogScreenState extends State<ProductCatalogScreen> {
   List<Product> _products = [];
   bool _isLoading = true;
   String _searchQuery = "";
+  final _labelService = LabelPrintingService();
 
   @override
   void initState() {
@@ -116,7 +118,27 @@ class _ProductCatalogScreenState extends State<ProductCatalogScreen> {
                             padding: const EdgeInsets.only(top: 8.0),
                             child: Text("Price: Rs. ${p.price.toStringAsFixed(2)} | Barcode: ${p.barcode}", style: const TextStyle(color: AppTheme.textSecondary)),
                           ),
-                          trailing: const Icon(Icons.chevron_right, color: Colors.white54),
+                          trailing: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              IconButton(
+                                icon: const Icon(Icons.print, color: AppTheme.accentColor),
+                                tooltip: "Print Label",
+                                onPressed: () {
+                                  _labelService.printLabel(
+                                    productName: p.name,
+                                    barcode: p.barcode,
+                                    price: p.price
+                                  );
+                                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                                    content: Text("Printing label for ${p.name}..."),
+                                    duration: const Duration(seconds: 1),
+                                  ));
+                                },
+                              ),
+                              const Icon(Icons.chevron_right, color: Colors.white54),
+                            ],
+                          ),
                           onTap: () async {
                              await Navigator.push(context, MaterialPageRoute(
                                builder: (_) => ProductFormScreen(dao: widget.dao, product: p)

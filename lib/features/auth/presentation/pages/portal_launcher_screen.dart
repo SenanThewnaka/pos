@@ -13,6 +13,7 @@ import 'package:pos_app/features/dashboard/presentation/pages/settings_screen.da
 import 'package:pos_app/core/logic/inventory_service.dart';
 import 'package:pos_app/core/logic/label_printing_service.dart';
 import 'package:pos_app/core/logic/transaction_service.dart';
+import 'package:pos_app/features/inventory/presentation/pages/supplier_management_screen.dart';
 
 class PortalLauncherScreen extends StatelessWidget {
   final AppDatabase db;
@@ -108,7 +109,7 @@ class PortalLauncherScreen extends StatelessWidget {
                   crossAxisSpacing: 16,
                   mainAxisSpacing: 16,
                 ),
-                itemCount: 6,
+                itemCount: 7,
                 itemBuilder: (context, index) {
                    final portals = [
                       _buildSmallPortal(context, "Command Center", Icons.dashboard_customize, AppTheme.accentColor, 
@@ -123,6 +124,8 @@ class PortalLauncherScreen extends StatelessWidget {
                         () => Navigator.push(context, MaterialPageRoute(builder: (_) => StaffManagementScreen(db: db, syncService: syncService)))),
                       _buildSmallPortal(context, "System Config", Icons.settings_suggest, Colors.blueGrey, 
                         () => Navigator.push(context, MaterialPageRoute(builder: (_) => SettingsScreen(syncService: syncService)))),
+                      _buildSmallPortal(context, "Suppliers", Icons.groups, Colors.indigoAccent, 
+                        () => Navigator.push(context, MaterialPageRoute(builder: (_) => SupplierManagementScreen(db: db)))),
                    ];
                    return portals[index];
                 },
@@ -136,7 +139,17 @@ class PortalLauncherScreen extends StatelessWidget {
                  label: const Text("TERMINATE SESSION", style: TextStyle(color: AppTheme.dangerColor)),
                  onPressed: () => Navigator.pop(context),
                ),
-            )
+            ),
+            
+            if (syncService.shopCode != null)
+               Padding(
+                 padding: const EdgeInsets.only(top: 16.0),
+                 child: Center(
+                   child: Text("STORE CODE: ${syncService.shopCode}", 
+                     style: GoogleFonts.robotoMono(color: Colors.white24, fontSize: 12, letterSpacing: 2)
+                   )
+                 ),
+               ),
           ],
         ),
       ),

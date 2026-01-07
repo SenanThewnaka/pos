@@ -6,6 +6,7 @@ import 'sales_event.dart';
 import 'sales_state.dart';
 
 import '../../../../core/logic/receipt_service.dart';
+import '../../../../core/logic/shop_config_service.dart';
 
 class SalesBloc extends Bloc<SalesEvent, SalesState> {
   final TransactionService _transactionService;
@@ -110,17 +111,24 @@ class SalesBloc extends Bloc<SalesEvent, SalesState> {
       );
 
       // 2. Print Receipt (Async, don't block UI success indefinitely)
-      final receipt = _receiptService.generateReceipt(
-        shopName: "SYNTHORA POS",
+      final config = ShopConfigService();
+      await config.loadSettings();
+
+
+
+      await _receiptService.printReceipt(
+        shopName: config.shopName,
+        shopAddress: config.shopAddress,
+        shopPhone: config.shopPhone,
+        headerMessage: config.headerMessage,
+        footerMessage: config.footerMessage,
         cashierName: "User $_currentUserId",
-        saleUuid: "PENDING-UUID", // Refactor service to return UUID if needed
+        saleUuid: "PENDING-UUID", 
         date: DateTime.now(),
         items: state.cartItems,
         total: state.grandTotal,
         paymentMethod: event.paymentMethod,
       );
-      
-      await _receiptService.printReceipt(receipt);
       
       emit(state.copyWith(
         status: SalesStatus.success,
